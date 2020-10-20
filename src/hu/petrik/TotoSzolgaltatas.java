@@ -207,4 +207,20 @@ public class TotoSzolgaltatas {
         }
         return "Eredmény: Találat: "+talalat+", nyeremény: "+nyeremeny+" Ft";
     }
+
+    public double nyeresiArany(Eredmeny e)
+    {
+        int db = 0;
+        int ind = 0;
+        for (int i = 0; i < this.forduloLista.size(); i++) {
+            for (int j = 0; j < this.forduloLista.get(i).getEredmenyek().size(); j++) {
+                if(this.forduloLista.get(i).getEredmenyek().get(j) == e)
+                {
+                    db ++;
+                }
+            }
+        }
+        double d = this.forduloLista.size()*14;
+        return db/d*100;
+    }
 }

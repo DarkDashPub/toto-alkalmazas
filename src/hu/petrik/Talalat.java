@@ -14,7 +14,7 @@ public class Talalat extends Fordulo {
     public int getTalalatokSzama() {
         return talalatokSzama;
     }
-    
+
     public int getNyeremeny() {
         return nyeremeny;
     }
